@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhuyu Chen Su">
+    <link rel="stylesheet" href="musica_estilo.css">
+    <title>Músicas</title>
+</head>
+<body onload="load_modal()">
+<!-- video -->
+<video loop id="myVideo" style="z-index: 0;">
+    <source src="recursos\onepunch.mp4" type="video/mp4">
+</video>
+
+  <a href="testeanime.html"><img src="recursos\logo2.jpg" alt="Logo" class="placeHolderImg" style="position: absolute; z-index: 1;"></a>
+  <div class="slider-cont" style="position: absolute; z-index: 1; top: 50%;">
+    <div class="slider">
+      <img src="recursos/volume2.png" alt="Volume" style="max-width: 7%; max-height: auto;">
+      <input id="som" type="range" min="0" max="100" value="10">
+    </div>
+  </div>
+  <!-- text to describe the video -->
+  <div class="content">
+    <h1>Você está escutando: Rádio Vent&Vida</h1>
+    <p id="tocando">Tocando agora: ...</p>
+    <!--pause/play -->
+    <div class="buttons">
+      <button id="myBtn_bad" onclick="nextVideo();" disabled>Horrível 🤮</button>
+      <button id="myBtn" onclick="myFunction(); enable(); setVolume(som.value);">Começar</button>
+      <button id="myBtn_good" onclick="nextVideo(); juntarLista(description[x-1], enderecos[x-1]);" disabled>Incrível 😍</button>
+    </div>
+  </div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Como funciona?</h2>
+    <p>Para adicionar a música à sua lista clique em "Incrível 😍".<br> Caso não deseje adicionar a música clique em "Horrível 🤮".<br>Forneceremos uma lista no final com os links do Youtube para as músicas escolhidas!</p>
+    <h4>Clique em "Começar" para iniciar a programação de músicas!</h4>
+  </div>
+
+
+</div>
+<div id="myModal-2" class="modal-2">
+  <!-- Modal2 content -->
+  <div class="modal-content-2">
+    <h2>A versão gratuita da Rádio Vent&Vida acabou!! 😱😭</h2>
+    <h3>Felizmente para você, com apenas R$99,99 por mês você pode ter acesso ilimitado ao nosso acervo completo de mais de 10 músicas! 😁</h3>
+    <p>Aqui está a lista de links das músicas que você marcou como "Incrível 😍":</p>
+    <ul id="links_lista" style="user-select: text;"></ul>
+    <img src="recursos\\premium.jpg" alt="Compre premium" id="myPremium">
+    <div>
+      <h4>Deseja começar de novo? Clique em "Começar Novamente"!</h4>
+      <a href="musica.html"><button class="novamente_btn">Começar Novamente</button></a>
+    </div>
+    <div>
+      <h4>Quer voltar à página principal? Clique em "Página Principal"!</h4>
+      <a href="testeanime.html"><button class="principal_btn">Página Principal</button></a>
+    </div>
+  </div>
+</div>
+
+  <!-- JavaScript begins -->
+  <script>
+    var som = document.getElementById("som");
+    som.onchange = function() {setVolume(som.value)};
+
+    function setVolume(x) {
+    x = x/250;
+    video.volume = x;
+  }
+
+    // Get video
+    var video = document.getElementById("myVideo");
+    
+  
+    // Get button
+    var btn = document.getElementById("myBtn");
+
+    const lista_de_videos = ["recursos/onepunch.mp4", "recursos/yourlie.mp4", "recursos/attack.mp4", "recursos/overlord.mp4", "recursos/naruto.mp4"];
+    const description = ["One Punch Man OST -1080p- Seigi Shikkou (Original)","「Creditless」Your Lie In April OP / Opening 1「UHD 60FPS」","Attack on Titan – Opening Theme – Feuerroter Pfeil und Bogen", "Overlord – Opening Theme – Clattanoia", "Naruto Shippuden Opening 6 | Sign (HD)"];
+    const enderecos = ["https://www.youtube.com/watch?v=rW7OB_HDCGQ",  "https://www.youtube.com/watch?v=Mzi_V0m7Qsk", "https://www.youtube.com/watch?v=8OkpRK2_gVs", "https://www.youtube.com/watch?v=KOWcj7XKnfQ", "https://www.youtube.com/watch?v=SavhHnWla6c"];
+    var x = 0;
+    document.getElementById("tocando").innerHTML = "Tocando agora: " + "\"" + description[x] + "\"";
+    function nextVideo() {
+        x++;
+        
+        if (x >= lista_de_videos.length) {
+          // display end modal
+          load_modal_2();
+          video.pause();
+          disable();
+          return
+        }
+        video.src = lista_de_videos[x];
+        document.getElementById("tocando").innerHTML = "Tocando agora: " + "\"" + description[x] + "\"";
+       
+    }
+    function juntarLista(name, endereco) {
+      var ul = document.getElementById("links_lista");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode("Link da música "+ name + ": " + endereco));
+      ul.appendChild(li);
+    }
+    // Pause and play video, change button text
+    const button_bad = document.getElementById("myBtn_bad")
+    const button_good = document.getElementById("myBtn_good")
+    function enable() {
+      button_bad.disabled = false;
+      button_good.disabled = false;
+      video.autoplay = true;
+    }
+    function disable() {
+      button_bad.disabled = true;
+      button_good.disabled = true;
+      btn.disabled = true;
+    }
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+
+    function load_modal() {
+      var modal = document.getElementById("myModal");
+      var span = document.getElementsByClassName("close")[0];
+      modal.style.display = "block";
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+    }
+            // Get modal
+      var modal = document.getElementById("myModal");
+
+
+      // Get the element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+
+      // clicks on (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      function load_modal_2() {
+      var modal = document.getElementById("myModal-2");
+      modal.style.display = "block";
+      
+    }
+            // Get modal
+      var modal = document.getElementById("myModal-2");
+
+    </script>
+</body>
+</html>

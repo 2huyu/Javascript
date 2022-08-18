@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<link rel="stylesheet" href="testeanime.css">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie-edge">
+		<meta name="description" content="Melhores Animes do Planet Earth. ASSITA FÁCIL! GRATUITO! 5X MAIS EMPREGABILIDADE! CERTIFICADO INTERNACIONAL SEM DISCRIMINAÇÃO!">
+		<meta name="author" content="Zhuyu Chen Su">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum">
+		<meta name="application-name" content="VeVi">
+		<meta name="keywords" content="historia,anime,serie,animação,escrever,musica,review,coach">
+		<title>Acervo Animado - Vent & Vida</title>
+	</head>
+
+	<body>
+		<header>
+			<div class="logo">
+				<img src="logo2.jpg" class="logoimg" alt="Logo">
+				<h3>Vent&<br>Vida</h3>
+			</div>
+				<div class="pesquisa-conteiner"><input type="text" placeholder="Encontre..."></div>	
+				<div class="topo">
+					<a href=""><img src="notificacao.jpg" width="20px"></a>
+					<a href="#">Login</a>
+					<a href="cadastro.html">Cadastre-se</a>
+				</div>
+			</div>
+		</header>
+		<nav class="menu1">
+			<a href="#">Leia</a>
+			<a href="#">Assista</a>
+			<a href="#">Comunidade</a>
+			<a href="#">Arte</a>
+			<a href="musica.html">Música</a>
+		</nav>
+		<nav class="ferramentas">
+			<ul>
+				<li><a href="testeanime.html">Página Inicial</a></li>
+				<li><a href="#">Explorar</a></li>
+				<li><a href="#">Ferramentas</a></li>
+				<li><a href="formulario.html">Suporte</a></li>
+				<li><a href="#">Sobre</a></li>
+			</ul>
+		</nav>
+		<div class="recomendacao">
+			<div class="recomendacaotop">Dê Uma Chance...</div>
+			<div class="recomendacaoarrow"><img src="arrowleft.png"></div>
+			<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/4181/Clannad__After_Story"><img src="recomendacao1.jpg"></a></div>
+			<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/44074/Shiguang_Dailiren"><img src="recomendacao2.jpg"></a></div>
+			<div class="recomendacaoimgs"><a href="https://www.rottentomatoes.com/tv/avatar_the_last_airbender/s01"><img src="recomendacao5.jpg"></a></div>
+			<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/37521/Vinland_Saga?q=vinland&cat=anime"><img src="recomendacao4.jpg"></a></div>
+			<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2"><img src="recomendacao3.jpg"></a></div>
+			<div class="recomendacaoarrow"><img src="arrowright.png"></div>
+		</div>
+		<section class="sobre-conteiner">
+			<div class="banner"><img src="criativo.jpg" alt="Criativo"></div>
+			<div class="porque">
+				<h1>Por quê?</h1>
+				<p>Com a pandemia, o isolamento psicológico abalou o mundo em uma escala surpreendente e muitos consumiram animes	, séries, jogos para preencher um vazio existencial. 
+					Porém, qualquer produto de alta produção de dopamina pode se tornar um mecanismo de escapismo, sem um autocontrole e reflexão adequado da pessoa.</p>
+				<p>Mas.. por que não assistir algo que transmita um bom conselho de vida? Talvez uma boa obra possa lhe inspirar a fazer algo que goste... abrir um pouco mais a mente... libertá-la...</p> 
+				<p>Quem sabe se não poderia encontrar sua vocação?</p>
+				<div>
+					<input type="search" placeholder="Comece...">
+					<button id="mostrar-login">Crie</button>
+					<script>
+						document.querySelector("#mostrar-login").addEventListener("click", function(){
+    					document.querySelector(".login-popup").classList.add("active");
+						});
+					</script>
+				</div>
+			</div>
+		</section>
+		<div class="top">
+			<div class="top-top">Top</div>
+			<div class="topimgs"><a href="https://myanimelist.net/anime/28851/Koe_no_Katachi"><img src="top2.jpg"></a></div>
+			<div class="topimgs"><a href="https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2"><img src="top1.jpg"></a></div>
+			<div class="topimgs"><a href="https://www.youtube.com/watch?v=Xt6pztKK5jk"><img src="top4.jpg"></a></div>
+			<div class="topimgs"><a href="https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu"><img src="top3.jpg"></a></div>
+			<a href="#"><p>Mais</p></a>
+		</div>
+		<!--============== CRIE / LOGIN ================-->
+		<div class="login-popup">
+			<div class="login-fechar-btn">&times;</div>
+			<script>
+				document.querySelector(".login-popup .login-fechar-btn").addEventListener("click", function(){
+    			document.querySelector(".login-popup").classList.remove("active");
+				});
+			</script>
+			<div class="login-form">
+				<h2>Login</h2>
+				<div class="login-form-elemento">
+					<label for="email">Usuário</label>
+					<input type="text" id="login-usuario" placeholder="Digite seu usuário">
+				</div>
+				<div class="login-form-elemento">
+					<label for="senha">Senha</label>
+					<input type="password" id="login-senha" placeholder="Digite sua senha">
+				</div>
+				<div class="login-form-elemento">
+					<input type="checkbox" id="lembrar-senha">
+					<label for="lembrar-senha">Lembrar senha</label>
+				</div>
+				<div class="login-form-elemento">
+					<button>Entrar</button>
+				</div>
+				<div class="login-form-elemento">
+					<a href="formulario.html">Esqueceu a senha?</a>
+				</div>
+				<div class="login-form-elemento">
+					<a href="cadastro.html">Não se cadastrou ainda?</a>
+				</div>
+			</div>
+			<!--============== /// ================-->
+		</div>
+		<div class="motivos">
+			<div class="circulos">
+				<h2>1. Pare</h2>
+				<br>
+				<p>Se você estiver deixando de realizar atividades importantes para sua saúde física e psicológica, ou para o bem de si e de sua família, em troca de consumir algum produto compulsivamente,
+					significa que seu sistema dopaminérgico está desestabilizado.<br> Toda sua motivação para realizar diferentes trabalhos ou práticas importantes está sendo convertida em motivação para 
+					continuar consumindo o produto ou a atividade viciosa e destrutiva.
+				</p>
+			</div>
+			<div class="circulos">
+				<h2>2. Reflita</h2>
+				<br>
+				<p>Claro, com animes, filmes e séries, não há exceção. Porém, isso não significa que deva evitar esse mundo, pelo contrário, a sétima arte é uma das formas mais completas e satisfatórias de se extrair diversão.
+					 Entretanto, não se pode consumir prazeres fáceis pela vida toda e chamar isso de saudável.<br> Tenho certeza que você tem objetivos maiores, mas difíceis de alcançar ou começar. 
+					 Quem sabe se trocar um prazer compulsivo por um ar novo, que divirta e ensine, possa lhe inspirar a algo a mais? Não custa dar uma chance.</p>
+			</div>
+			<div class="circulos">
+				<h2>3. Divirta-se</h2>
+				<br>
+				<p>Lembre-se, o mais importante de tudo, é que esteja se divertindo e, principalmente, sentir que esteja valendo a pena, valendo seu tempo e sua atenção. Não é errado levar um gosto como a carreira de sua vida,
+					 mas se investir naquilo não levar a um bom futuro, talvez não tenha descoberto ainda seu verdadeiro hobby. Esforce-se, busque, estude, canse, mas no fim, sinta-se feliz e valorizado por isso que fez.</p>
+				<p>E, claro, descanse, com uma boa dose de arte. Lembre-se, mais uma vez, consuma como descontração, não como um trabalho.</p>
+			</div>
+		</div>
+		<section class="last-conteiner">
+			<div class="review">
+				<h3>Última Análise</h3>
+				<hr>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae alias culpa iure provident maxime quam minus, repudiandae hic corrupti voluptatibus, vel cupiditate accusamus nulla debitis. Aspernatur laudantium vero in ducimus!
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, dolore quae beatae cupiditate quidem quo asperiores deserunt nulla necessitatibus nam eveniet, eos error suscipit in, optio inventore quos rem amet.
+				</p>
+				<div class="arrowdown"><a href="#"><img src="arrowdown.png"></a></div>
+			</div>
+			<div class="temporada">
+				<div class="recomendacaotop">Animes da Temporada</div>
+				<div class="recomendacaoarrow"><img src="arrowleft.png"></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic"><img src="temporada1.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/50265/Spy_x_Family"><img src="temporada2.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/50631/Komi-san_wa_Comyushou_desu_2nd_Season?q=komi&cat=anime"><img src="temporada3.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/39935/Ultraman_Season_2?q=ultraman&cat=anime"><img src="temporada5.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/50273/Tomodachi_Game?q=tomodac&cat=anime"><img src="temporada4.jpg"></a></div>
+				<div class="recomendacaoarrow"><img src="arrowright.png"></div>
+			</div>
+			<div class="trailers">
+				<div class="recomendacaotop" id="trailerstop">Trailers</div>
+				<div class="video"><iframe src="https://www.youtube.com/embed/Wye4-DkLt8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+				<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/2G42xjBjdck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+				<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/mDYqT0_9VR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+			</div>
+			<div class="recomendacao2">
+				<div class="recomendacaotop">Mais</div>
+				<div class="recomendacaoarrow"><img src="arrowleft.png"></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso?q=shigatsu&cat=anime"><img src="mais1.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://www.youtube.com/watch?v=AVubInymqEk"><img src="mais2.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/578/Hotaru_no_Haka?q=grave%20of%20&cat=anime"><img src="mais3.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2?q=mushoku&cat=anime"><img src="mais4.jpg"></a></div>
+				<div class="recomendacaoimgs"><a href="https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood?q=fullmeta&cat=anime"><img src="mais5.jpg"></a></div>
+				<div class="recomendacaoarrow"><img src="arrowright.png"></div>
+			</div>
+		</section>
+		<div class="grid5">
+            <div class="footerLeft">
+                <h6>Admins</h6>
+                <p>Vítor Benvenisti Laguna Navarenho</p>
+                <p>Zhuyu Chen Su</p>
+            </div>
+            <div class="footerRight">
+                <h6>Siga-nos nas Redes Sociais</h6>
+                <a href="#"><p>Twitter</p></a>
+                <a href="#"><p>Instagram</p></a>
+                <a href="#"><p>Facebook</p></a>
+            </div>
+            <div class="footerMiddle">
+                <h6>Contate-nos</h6>
+                <p>xxxxxxxxx@gmail.com</p>
+                <p>yyyyyyyyy@gmail.com</p>
+                <p>zzzzzzzzz@gmail.com</p>
+            </div>
+            <div class="footerMiddleLeft">
+                <h6>Termos de Licença</h6>
+                <p>Ao usar esse site você concorda que Nino Nakano é Best Girl</p>
+            </div>
+            <div class="footerMiddleRight">
+                <h6>© Copyright</h6>
+                <p>Esse site é protegido por algumas leis que existem aí sobre Copyright</p>
+            </div>
+        </div>
+	</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<link rel="stylesheet" href="testeanime.css">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie-edge">
+		<meta name="description" content="Melhores Animes do Planet Earth. ASSITA FÁCIL! GRATUITO! 5X MAIS EMPREGABILIDADE! CERTIFICADO INTERNACIONAL SEM DISCRIMINAÇÃO!">
+		<meta name="author" content="Zhuyu Chen Su, Vitor Benvenisti Laguna, Luiggi Spechoto">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum">
+		<meta name="application-name" content="VeVi">
+		<meta name="keywords" content="historia,anime,serie,animação,escrever,musica,review,coach">
+		<title>Acervo Animado - Vent & Vida</title>
+	</head>
+
+    <body>
+		<header>
+			<div class="logo">
+				<img src="logo2.jpg" class="logoimg" alt="Logo">
+				<h3>Vent&<br>Vida</h3>
+			</div>
+				<div class="pesquisa-conteiner"><input type="text" placeholder="Encontre..."></div>	
+				<div class="topo">
+					<a href=""><img src="notificacao.jpg" width="20px"></a>
+					<a href="#" id="mostrar-login2">Login</a>
+                    <script>
+						document.querySelector("#mostrar-login2").addEventListener("click", function(){
+    					document.querySelector(".login-popup").classList.add("active");
+						});
+					</script>
+					<a href="#">Cadastre-se</a>
+				</div>
+			</div>
+		</header>
+		<div class="menu1">
+			<a href="#">Leia</a>
+			<a href="#">Assista</a>
+			<a href="#">Comunidade</a>
+			<a href="#">Arte</a>
+			<a href="musica.html">Música</a>
+		</div>
+		<div class="ferramentas">
+			<ul>
+				<li><a href="testeanime.html">Página Inicial</a></li>
+				<li><a href="#">Explorar</a></li>
+				<li><a href="#">Ferramentas</a></li>
+				<li><a href="formulario.html">Suporte</a></li>
+				<li><a href="#">Sobre</a></li>
+			</ul>
+		</div>
+
+
+        <div class="reg-container">
+            <div class="reg-titulo">Cadastre-se</div>
+            <form action="#">
+                <div class="user-detalhes">
+                    <div class="input-reg">
+                        <span class="detalhes">Nome Completo</span>
+                        <input type="text" placeholder="Nome" required>
+                    </div>
+                    <div class="input-reg">
+                        <span class="detalhes">Usuário</span>
+                        <input type="text" placeholder="Nome de Usuário" required>
+                    </div>
+                    <div class="input-reg">
+                        <span class="detalhes">Email</span>
+                        <input type="text" placeholder="Email" required>
+                    </div>
+                    <div class="input-reg">
+                        <span class="detalhes">Senha</span>
+                        <input type="text" placeholder="Senha com letras, números e caracteres especiais" required>
+                    </div>
+                    <div class="input-reg">
+                        <span class="detalhes">Confirmar Senha</span>
+                        <input type="text" placeholder="Confirme sua senha" required>
+                    </div>
+                    <div class="input-reg">
+                        <span class="detalhes">Data de Nascimento</span>
+                        <input type="date" name="birthdate" required="date" class="inputUser">
+                    </div>
+                </div>
+                    <div class="generos">
+                        <input type="radio" name="gender" id="ponto-1">
+                        <input type="radio" name="gender" id="ponto-2">
+                        <input type="radio" name="gender" id="ponto-3">
+                        <span class="generos-titulo">Gênero</span>
+                        <div class="categoria">
+                            <label for="ponto-1">
+                                <span class="ponto um"></span>
+                                <span class="generoum">Masculino</span>
+                            </label>
+                            <label for="ponto-2">
+                                <span class="ponto dois"></span>
+                                <span class="generoum">Feminino</span>
+                            </label>
+                            <label for="ponto-3">
+                                <span class="ponto tres"></span>
+                                <span class="generoum">Outros</span>
+                            </label>
+                        </div>
+                    </div>
+                <div class="reg-botao">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="login-popup">
+			<div class="login-fechar-btn">&times;</div>
+			<script>
+				document.querySelector(".login-popup .login-fechar-btn").addEventListener("click", function(){
+    			document.querySelector(".login-popup").classList.remove("active");
+				});
+			</script>
+			<div class="login-form">
+				<h2>Login</h2>
+				<div class="login-form-elemento">
+					<label for="email">Usuário</label>
+					<input type="text" id="login-usuario" placeholder="Digite seu usuário">
+				</div>
+				<div class="login-form-elemento">
+					<label for="senha">Senha</label>
+					<input type="password" id="login-senha" placeholder="Digite sua senha">
+				</div>
+				<div class="login-form-elemento">
+					<input type="checkbox" id="lembrar-senha">
+					<label for="lembrar-senha">Lembrar senha</label>
+				</div>
+				<div class="login-form-elemento">
+					<button>Entrar</button>
+				</div>
+				<div class="login-form-elemento">
+					<a href="formulario.html">Esqueceu a senha?</a>
+				</div>
+				<div class="login-form-elemento">
+					<a href="cadastro.html">Não se cadastrou ainda?</a>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="grid5">
+            <div class="footerLeft">
+                <h6>Admins</h6>
+                <p>Vítor Benvenisti Laguna Navarenho</p>
+                <p>Zhuyu Chen Su</p>
+                <p>Luiggi Spechoto</p>
+            </div>
+            <div class="footerRight">
+                <h6>Siga-nos nas Redes Sociais</h6>
+                <a href="#"><p>Twitter</p></a>
+                <a href="#"><p>Instagram</p></a>
+                <a href="#"><p>Facebook</p></a>
+            </div>
+            <div class="footerMiddle">
+                <h6>Contate-nos</h6>
+                <p>xxxxxxxxx@gmail.com</p>
+                <p>yyyyyyyyy@gmail.com</p>
+                <p>zzzzzzzzz@gmail.com</p>
+            </div>
+            <div class="footerMiddleLeft">
+                <h6>Termos de Licença</h6>
+                <p>Ao usar esse site você concorda que Nino Nakano é Best Girl</p>
+            </div>
+            <div class="footerMiddleRight">
+                <h6>© Copyright</h6>
+                <p>Esse site é protegido por algumas leis que existem aí sobre Copyright</p>
+            </div>
+        </div>
+	</body>
+
+</html>
