@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>Jogo da Velha</title>
+</head>
+<body>
+  <div id="game">
+    <header>
+      <div class="cell players">
+        <div id="x">
+          <img src="x.svg" alt="jogador X" />
+        </div>
+        <div id="o">
+          <img src="o.svg" alt="jogador O" />
+        </div>
+      </div>
+      <div class="cell round-label" id="rodada">
+        X RODADA
+      </div>
+      <div class="cell reset">
+        <button onclick="reset()">
+          <img src="reset.svg" alt="Reiniciar jogo" />
+        </button>
+      </div>
+    </header>
+    <div id="board">
+      <div class="row">
+        <button id="cell_0" onclick="jogada(0)" class="cell">
+          <!--<img src="x.svg" alt="jogador X" />-->
+          &nbsp;
+        </button>
+        <button id="cell_1" onclick="jogada(1)" class="cell">&nbsp;</button>
+        <button id="cell_2" onclick="jogada(2)" class="cell">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button id="cell_3" onclick="jogada(3)" class="cell">&nbsp;</button>
+        <button id="cell_4" onclick="jogada(4)" class="cell">
+          <!--<img src="o.svg" alt="jogador O" /></button>-->
+          &nbsp;
+        <button  id="cell_5" onclick="jogada(5)" class="cell">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button id="cell_6" onclick='jogada(6)' class="cell">&nbsp;</button>
+        <button id="cell_7" onclick='jogada(7)' class="cell">&nbsp;</button>
+        <button id="cell_8" onclick='jogada(8)' class="cell">&nbsp;</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-item win-container" >
+        <label >X (você)</label>
+        <div class="total-number" id="x-ponto">0</div>
+      </div>
+      <div class="footer-item ties-container">
+        <label>EMPATES</label>
+        <div class="total-number" id="empate-ponto">0</div>
+      </div>
+      <div class="footer-item cpu-container" >
+        <label onclick="atualizaponto()">O (CPU)</label>
+        <div class="total-number" id="o-ponto">0</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
